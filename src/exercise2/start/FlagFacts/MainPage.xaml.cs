@@ -51,10 +51,13 @@ namespace FlagFacts
             this.BindingContext = CurrentFlag;
         }
 
+
         private async void OnShow(object sender, EventArgs e)
         {
+            CurrentFlag.DateAdopted = CurrentFlag.DateAdopted.AddYears(1);
+
             await DisplayAlert(CurrentFlag.Country,
-                $"{CurrentFlag.DateAdopted:D} - {CurrentFlag.IncludesShield}: {CurrentFlag.MoreInformationUrl}", 
+                $"{CurrentFlag.DateAdopted:D} - {CurrentFlag.IncludesShield}: {CurrentFlag.MoreInformationUrl}",
                 "OK");
         }
 
