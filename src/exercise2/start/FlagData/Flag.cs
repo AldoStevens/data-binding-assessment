@@ -8,6 +8,7 @@ namespace FlagData
     /// </summary>
     public class Flag : INotifyPropertyChanged
     {
+      private DateTime _dateAdopted;
       public event PropertyChangedEventHandler PropertyChanged;
         /// <summary>
         /// Name of the country that this flag belongs to
@@ -21,8 +22,7 @@ namespace FlagData
         /// The date this flag was adopted
         /// </summary>
         // public DateTime DateAdopted { get; set; }
-        private DateTime _dateAdopted;
-        
+
         public DateTime DateAdopted
         {
             get { return _dateAdopted; }
